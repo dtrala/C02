@@ -6,7 +6,7 @@
 /*   By: dlascaba <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 21:32:01 by dlascaba          #+#    #+#             */
-/*   Updated: 2021/07/14 22:16:01 by dlascaba         ###   ########.fr       */
+/*   Updated: 2021/07/15 18:25:47 by dlascaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_str_is_printable(char *str)
 	{
 		if ((str[i] < 31) || (str[i] > 127))
 			return (0);
-		i++:
+		i++;
 	}
 	return (1);
-	}
+}

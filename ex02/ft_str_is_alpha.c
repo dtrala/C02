@@ -6,31 +6,20 @@
 /*   By: dlascaba <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 19:22:13 by dlascaba          #+#    #+#             */
-/*   Updated: 2021/07/14 19:34:40 by dlascaba         ###   ########.fr       */
+/*   Updated: 2021/07/15 17:25:08 by dlascaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_alpha(char *str)
 {
 	int		i;
-	bool	alph;
-	char	fals;
 
 	i = 0;
-	alph = true;
-	while (true)
+	while (str[i])
 	{
-		fals = str[i];
-		if (fals == '\0')
-		{
-			break ;
-		}
-		if (!((fals >= 'A' && fals <= 'Z') || (fals >= 'a' && fals <= 'z')))
-		{
-			alph = false;
-			break ;
-		}
+		if (str[i] < 'A' || (str[i] > 'Z' && str[i] < 'a') || str[i] > 'z')
+			return (0);
 		i++;
 	}
-	return (alph);
+	return (1);
 }

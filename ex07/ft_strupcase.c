@@ -6,19 +6,19 @@
 /*   By: dlascaba <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 22:17:57 by dlascaba          #+#    #+#             */
-/*   Updated: 2021/07/14 22:41:05 by dlascaba         ###   ########.fr       */
+/*   Updated: 2021/07/15 18:30:27 by dlascaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strupcase(char *str)
 {
-	int	*i;
+	int	i;
 
-	i = str;
-	while (*i)
+	i = 0;
+	while (str[i])
 	{
-		if (*i >= 'a' && *i <= 'z')
-			*i -= 32;
+		if (str[i] >= 'a' && str[i] <= 'z')
+			str[i] = str[i] - 32;
 		 i++;
 	}
 	return (str);
